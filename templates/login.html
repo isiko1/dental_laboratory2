@@ -1,0 +1,55 @@
+{% extends "base.html"%} {% block content %}
+
+<h3>Sign In</h3>
+<div class="form group">
+
+	<form action="/login" method="post" novalidate>
+		{{ form.hidden_tag() }}
+		<div>
+			{{ form.username.label (class="form-control-label") }}<br/>
+      {% if form.username.errors %} {{ form.username (class="form-control
+      form-control-lg is-invalid") }}
+			<div class="invalid feedback">
+				{% for error in form.username.errors %}
+				<span>{{ error}}</span>
+				{% endfor %}
+			</div>
+			{% else %} {{ form.username (class="form-control form-control-lg") }} {%
+      endif %}
+		</div>
+		<div>
+			{{ form.password.label (class="form-control-label") }}<br>
+      {% if form.username.errors %} {{ form.password (class="form-control
+      form-control-lg is-invalid") }}
+			<div class="invalid feedback">
+				{% for error in form.password.errors %}
+				<span>{{ error}}</span>
+				{% endfor %}
+			</div>
+			{% else %} {{ form.password (class="form-control form-control-lg") }} {%
+      endif %}
+		</div>
+		<div>
+			{{ form.confirm_password.label (class="form-control-label") }}<br>
+      {% if form.confirm_password.errors %} {{ form.confirm_password (class="form-control
+      form-control-lg is-invalid") }}
+			<div class="invalid feedback">
+				{% for error in form.confirm_password.errors %}
+				<span>{{ error}}</span>
+				{% endfor %}
+			</div>
+			{% else %} {{ form.confirm_password (class="form-control form-control-lg") }} {%
+      endif %}
+		</div>
+		<div class="checkbox">{{ form.remember_me(class="form-check-input") }}
+			{{ form.remember_me.label(class="form-check-label") }}</div>
+		<div>{{ form.submit(class="btn btn-outline-info") }}</div>
+		<small class="text-muted ml-2">
+    <a href="#">Forgot Password?</a>
+    </small>
+	</form>
+</div>
+<div class="border-top pt-3">
+	<h6 class="ml-2"> Need an account? Contact your Administrator</h6>
+</div>
+{% endblock %}

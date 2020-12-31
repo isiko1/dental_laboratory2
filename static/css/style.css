@@ -1,0 +1,37 @@
+body {
+    background-image: url(../images/imp.jpg);
+    background-attachment: fixed;
+    background-position: center;
+  
+}
+
+/*---------------Template Style----------------------------------*/
+
+a {
+    color: #fafafa;
+}
+nav .brand-logo {
+        margin-left: 30px;
+}
+h1,h2,h3,h4,h5,h6{
+    color:blueviolet;
+      }
+.container {
+       background-color: lightgoldenrodyellow;
+}
+.pat{
+    position: static;
+}
+
+/* ---------------button style------------------------------------*/ 
+
+.btn_small{
+    height: 30px;
+    width: 100px;
+    margin: 3px 2px;
+    padding: inherit;
+    } 
+
+button{
+        margin: 26px;
+}
